@@ -21,10 +21,9 @@ class Latex(make_pdf.Document):
     def __init__(self, document_directory, latex="latex", bibtex="bibtex"):
         # Initialize Document class
         super().__init__(document_directory)
-        # Initialize latex, and it's arguments.
+        # Initialize attributes
         self.latex = latex
         self.latex_arguments = ["-halt-on-error"]
-        # Initialize bibtex.
         self.bibtex = bibtex
 
     def to_pdf(self, output_directory):
