@@ -13,11 +13,11 @@
 # limitations under the License.
 import os
 import subprocess
-import make_pdf
+import latex_to_pdf
 import shutil
 
 
-class Latex(make_pdf.Document):
+class Latex(latex_to_pdf.Document):
     def __init__(self, document_directory, latex="latex", bibtex="bibtex"):
         # Initialize Document class
         super().__init__(document_directory)

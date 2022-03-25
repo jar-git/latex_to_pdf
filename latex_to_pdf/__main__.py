@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import sys
-import make_pdf
+import latex_to_pdf
 
 
 def main(args=None):
     try:
         # Create latex document from the second CLI arguments.
-        document = make_pdf.Latex(sys.argv[1])
+        document = latex_to_pdf.Latex(sys.argv[1])
 
         # Check that document exists, cannot build PDF from non-existing document.
         document.must_exist()
@@ -30,7 +30,7 @@ def main(args=None):
         document.to_pdf(output_directory)
 
     except IndexError:
-        print("usage: make_pdf <documentation_directory>")
+        print("usage: latex_to_pdf <documentation_directory>")
     except Exception as e:
         print(str(e))
 

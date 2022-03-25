@@ -14,13 +14,13 @@
 import setuptools
 
 setuptools.setup(
-    name='make_pdf',
+    name='latex_to_pdf',
     version='0.1.0',
     packages=setuptools.find_packages(exclude=('test',)),
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'make_pdf = make_pdf.__main__:main',
+            'latex_to_pdf = latex_to_pdf.__main__:main',
         ],
     },
     zip_safe=True
